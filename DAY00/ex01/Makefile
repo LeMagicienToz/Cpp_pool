@@ -6,13 +6,15 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/11 18:25:13 by muteza            #+#    #+#              #
-#    Updated: 2023/07/12 17:34:56 by muteza           ###   ########.fr        #
+#    Updated: 2023/07/12 19:03:03 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=           megaphone
+NAME=           PhoneBook
 
-SRCS=           megaphone.cpp\
+SRCS=           main.cpp\
+				phonebook.cpp\
+				contact.cpp
 			
 OBJS=           $(SRCS:.cpp=.o)
 
