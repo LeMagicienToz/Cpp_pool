@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:57:32 by muteza            #+#    #+#             */
-/*   Updated: 2023/07/12 17:50:38 by muteza           ###   ########.fr       */
+/*   Updated: 2023/07/13 15:13:23 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ class PhoneBook {
 		void input(void);
 		//contacts
 		Contact	contact[8];
-		
+	private:
+		int ft_isdigit(const char *str);
 };
 
 #endif

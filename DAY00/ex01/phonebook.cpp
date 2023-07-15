@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:12:17 by muteza            #+#    #+#             */
-/*   Updated: 2023/07/12 19:08:44 by muteza           ###   ########.fr       */
+/*   Updated: 2023/07/13 15:13:44 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@ PhoneBook::PhoneBook(void) {
 }
 
 
+int PhoneBook::ft_isdigit(const char *str){
+	
+	for(int i = 0; str[i]; i++)
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+	}
+	return (1);
+}
+
 void PhoneBook::add_contact(void) {
 	
 	std::string str;
@@ -34,7 +44,40 @@ void PhoneBook::add_contact(void) {
 			exit(0);
 		this->contact[this->index].set_lastName(str);	
 	}
-	std::cout << this->contact[this->index].get_lastName() << std::endl;
+	str.clear();
+	while (str.empty())
+	{
+		std::cout << "firstName : ";
+		std::getline (std::cin,str);
+		if (std::cin.fail())
+			exit(0);
+		this->contact[this->index].set_firstName(str);	
+	}
+	str.clear();
+	while (str.empty())
+	{
+		std::cout << "nickName : ";
+		std::getline (std::cin,str);
+		if (std::cin.fail())
+			exit(0);
+		this->contact[this->index].set_nickName(str);	
+	}
+	str.clear();
+	while (str.empty())
+	{
+		std::cout << "Number : ";
+		std::getline (std::cin,str);
+		if (std::cin.fail())
+			exit(0);
+		if (ft_isdigit(str.c_str()) == 0)
+		{
+			str.clear();
+			std::cout << "Error can only use Number" << std::endl;	
+		}
+		else
+			this->contact[this->index].set_number(str);	
+	}
+	std::cout << this->contact[this->index].get_number() << std::endl;
 	this->index++;
 }
 
