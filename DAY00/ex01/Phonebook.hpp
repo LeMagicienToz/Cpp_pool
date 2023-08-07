@@ -17,16 +17,18 @@
 class PhoneBook {
 
 	public:
-		int index;
 		//constructor + destructor
 		PhoneBook(void);
 		~PhoneBook(void);
 		//functions
 		void add_contact(void);
+		void search_contact(void);
 		void input(void);
 		//contacts
 		Contact	contact[8];
 	private:
+		int index;
+		int index_max;
 		int ft_isalpha(const char *str);
 		int ft_isdigit(const char *str);
 };

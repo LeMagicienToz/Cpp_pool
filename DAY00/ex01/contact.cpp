@@ -46,3 +46,11 @@ void	Contact::set_number(std::string str){
 std::string Contact::get_number(void) const{
 	return (this->_number);
 }
+
+void	Contact::set_darksecret(std::string str){
+	this->_darkestSecret = str;
+}
+
+std::string Contact::get_darksecret(void) const{
+	return (this->_darkestSecret);
+}

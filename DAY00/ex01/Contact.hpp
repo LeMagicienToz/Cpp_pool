@@ -15,7 +15,6 @@
 
 #include <string.h>
 #include <iostream>
-// #include "Phonebook.hpp"
 
 class Contact {
 
@@ -28,6 +27,8 @@ public:
 	void		set_nickName(std::string str);
 	std::string get_number(void) const;
 	void		set_number(std::string str);
+	std::string get_darksecret(void) const;
+	void		set_darksecret(std::string str);
 
 private:
 	std::string _lastName;
