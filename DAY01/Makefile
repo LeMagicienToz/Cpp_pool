@@ -5,16 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/11 18:25:13 by muteza            #+#    #+#              #
-#    Updated: 2023/07/12 19:03:03 by muteza           ###   ########.fr        #
+#    Created: 2023/08/13 22:22:41 by muteza            #+#    #+#              #
+#    Updated: 2023/08/13 22:22:57 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=           PhoneBook
 
 SRCS=           main.cpp\
-				phonebook.cpp\
-				contact.cpp
 			
 OBJS=           $(SRCS:.cpp=.o)
 
