@@ -5,29 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 10:03:48 by muteza            #+#    #+#             */
-/*   Updated: 2023/09/27 09:57:12 by muteza           ###   ########.fr       */
+/*   Created: 2023/09/25 06:34:03 by muteza            #+#    #+#             */
+/*   Updated: 2023/09/26 05:19:30 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "HumanB.hpp"
+#include "Fixed.hpp"
 
 int main()
 {
-    {
-        Weapon  club = Weapon("");
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
-    } 
-    {
-        Weapon  club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
-    }
+	Fixed a;
+	Fixed const b( 10 ); 
+	Fixed const c( 42.42f ); 
+	Fixed const d( b );
+	a = Fixed( 1234.4321f );
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 }
