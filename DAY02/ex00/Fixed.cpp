@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 05:20:24 by muteza            #+#    #+#             */
-/*   Updated: 2023/09/26 05:07:05 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/06 15:30:50 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ const int	Fixed::_fracbit = 8;
 
 Fixed::Fixed() : _value(0)
 {
-	std::cout << "Default constructeur called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &src) : _value(0)
 {
-	std::cout << "Copy constructeur called" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
@@ -41,7 +41,7 @@ Fixed	&Fixed::operator=(Fixed const &op) {
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructeur called" << std::endl;	
+	std::cout << "Destructor called" << std::endl;	
 }
 
 //Member function 

@@ -6,7 +6,7 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/10/04 15:01:51 by muteza           ###   ########.fr        #
+#    Updated: 2023/10/05 14:02:10 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,14 +26,14 @@ CXXFLAGS  =       -Wall -Wextra -Werror -std=c++98
 all:            $(NAME)
 	  
 %.o:%.cpp
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CXXFLAGS) -c $< -o $@
 	@printf $$'\033[1m*'
 
 # do:
-# 	@make $(NAME)
+#     @make $(NAME)
 
 $(NAME):                $(OBJS)
-			@$(CC) $(CXXFLAGS) $(SRCS) -o $(NAME)
+			@$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
 			@echo $$'\n✅ \033[1;32mproject compiled\033[0m ✅'
 
 library:
@@ -49,3 +49,5 @@ fclean:                 clean
 
 
 re:         fclean all
+
+.PHONY: all re fclean clean library
