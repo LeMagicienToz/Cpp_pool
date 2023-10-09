@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:43:42 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/04 19:01:57 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/09 16:17:19 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap()
 	std::cout << "ScavTrap Default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string name)
+ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
 	this->_name			= name;
 	this->_hitpoints	= 100;

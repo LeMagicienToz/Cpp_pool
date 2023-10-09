@@ -6,24 +6,24 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/10/05 14:02:10 by muteza           ###   ########.fr        #
+#    Updated: 2023/10/09 16:14:00 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=           ScavTrap
+NAME=		ScavTrap
 
-SRCS=           main.cpp\
-				ClapTrap.cpp\
-				ScavTrap.cpp\
+SRCS=		main.cpp\
+			ClapTrap.cpp\
+			ScavTrap.cpp\
 
 
-OBJS=           $(SRCS:.cpp=.o)
+OBJS=	$(SRCS:.cpp=.o)
 
-CC=             c++
+CC=		c++
 
-CXXFLAGS  =       -Wall -Wextra -Werror -std=c++98
+CXXFLAGS  =	-Wall -Wextra -Werror -std=c++98
 
-all:            $(NAME)
+all:	$(NAME)
 	  
 %.o:%.cpp
 	@$(CC) $(CXXFLAGS) -c $< -o $@
@@ -32,7 +32,7 @@ all:            $(NAME)
 # do:
 #     @make $(NAME)
 
-$(NAME):                $(OBJS)
+$(NAME):	$(OBJS)
 			@$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
 			@echo $$'\n✅ \033[1;32mproject compiled\033[0m ✅'
 
@@ -43,11 +43,11 @@ clean:
 			@rm -f $(OBJS)
 			@echo $$'\033[1;31mremoved object files\033[0m'
 			
-fclean:                 clean
+fclean:		clean
 			@rm -f $(NAME)
 			@echo $$'\033[1;31mremoved $(NAME)\033[0m'
 
 
-re:         fclean all
+re:	fclean all
 
 .PHONY: all re fclean clean library
