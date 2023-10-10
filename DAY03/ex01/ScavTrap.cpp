@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:43:42 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/09 16:17:19 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/10 15:13:58 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Constructor
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	this->_name			= "Default";
 	this->_hitpoints	= 100;
@@ -34,7 +34,7 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap Named constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &src)
+ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap Copy constructor called" << std::endl;
 	*this = src;

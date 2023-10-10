@@ -6,13 +6,13 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:16:30 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/05 10:27:35 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/10 15:15:34 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
 	this->_name			= "Default";
 	this->_hitpoints	= 100;
@@ -21,7 +21,7 @@ FragTrap::FragTrap()
 	std::cout << "FragTrap Default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const std::string name)
+FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 {
 	this->_name			= name;
 	this->_hitpoints	= 100;
@@ -30,7 +30,7 @@ FragTrap::FragTrap(const std::string name)
 	std::cout << "FragTrap Named constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &src)
+FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy constructor called" << std::endl;
 	*this = src;
