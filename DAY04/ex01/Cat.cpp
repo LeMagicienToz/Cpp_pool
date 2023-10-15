@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:33:25 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 18:45:29 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/16 01:58:55 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat(void)
 	std::cout << "Cat called" << std::endl;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal(src)
 {
 	*this = src;
 	return ;
