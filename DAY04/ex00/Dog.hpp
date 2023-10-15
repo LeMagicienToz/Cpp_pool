@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 06:35:00 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:10:49 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:19:54 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : virtual public Animal
 			//constructor and destructor
 			Dog(); //default
 			Dog(Dog const &src); //copy
-			~Dog();
+			virtual ~Dog();
 			//Member function
 			void	makeSound(void) const;
 			//operator

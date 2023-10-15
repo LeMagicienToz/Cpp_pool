@@ -6,19 +6,19 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:29:23 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:29:28 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:14:29 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void)
+WrongCat::WrongCat(void) : WrongAnimal()
 {
 	this->_type  = "WrongCat";
 	std::cout << "WrongCat called" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const & src)
+WrongCat::WrongCat(WrongCat const & src) : WrongAnimal(src)
 {
 	*this = src;
 	return ;

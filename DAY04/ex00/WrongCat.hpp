@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:30:38 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:31:01 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:20:04 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class WrongCat : virtual public WrongAnimal
 	public:
 		WrongCat(void);
 		WrongCat(WrongCat const & src);
-		~WrongCat(void);
+		virtual ~WrongCat(void);
 
 		WrongCat &	operator=(WrongCat const & rhs);
 		void		makeSound(void) const;

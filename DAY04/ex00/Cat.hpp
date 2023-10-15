@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 06:35:00 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:10:38 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:19:35 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : virtual public Animal
 			//constructor and destructor
 			Cat(); //default
 			Cat(Cat const &src); //copy
-			~Cat();
+			virtual ~Cat();
 			//Member function
 			void	makeSound(void) const;
 			//operator
