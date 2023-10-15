@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:33:42 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:32:57 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:26:35 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int main ()
 	i->makeSound(); //will output the cat sound! 
 	j->makeSound();
     meta->makeSound();
+
+	delete meta;
+	delete i;
+	delete j;
 	
 		//wrong test
 

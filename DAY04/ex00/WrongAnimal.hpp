@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:29:38 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:29:53 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:41:29 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class WrongAnimal
 		WrongAnimal &	operator=(WrongAnimal const & rhs);
 
 		void		makeSound(void) const;
-		std::string	getType(void) const;
+		std::string	const &getType(void) const;
 	protected:
 		std::string _type;
 };

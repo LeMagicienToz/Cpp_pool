@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 06:35:00 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:21:43 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:29:44 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal {
 			Animal(Animal const &src); //copy
 			virtual ~Animal();
 			//Accessor
-			std::string getType() const;
+			std::string const &getType() const;
 			//Member function
 			virtual void makeSound(void) const;
 			//operator

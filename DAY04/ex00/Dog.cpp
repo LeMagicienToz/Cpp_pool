@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:33:25 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:22:33 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:25:24 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Dog::Dog(Dog const & src) : Animal(src)
 
 Dog::~Dog(void)
 {
-	std::cout << "Cat destroy" << std::endl;
+	std::cout << "dog destroy" << std::endl;
 	return ;
 }
 

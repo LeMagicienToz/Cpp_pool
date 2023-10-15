@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:31:42 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:33:18 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:41:19 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	WrongAnimal::makeSound(void) const
 	return ;
 }
 
-std::string	WrongAnimal::getType(void) const
+std::string	const &WrongAnimal::getType(void) const
 {
 	return (this->_type);
 }

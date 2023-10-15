@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:29:30 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 15:19:11 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/15 17:40:51 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Animal	&Animal::operator=(Animal const &rhs) {
 
 //Accessor
 
-std::string	Animal::getType(void) const
+std::string	const &Animal::getType(void) const
 {
 	return (this->_type);
 }
@@ -45,7 +45,7 @@ std::string	Animal::getType(void) const
 
 void	Animal::makeSound(void) const
 {
-	std::cout << "" << std::endl;
+	std::cout << "Global Default Animal noise" << std::endl;
 }
 
 // Destructor
