@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:33:25 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 18:45:55 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/16 01:59:55 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::Dog(void)
 	std::cout << "Dog called" << std::endl;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) : Animal(src)
 {
 	*this = src;
 	return ;
