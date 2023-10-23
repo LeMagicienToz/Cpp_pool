@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 08:08:12 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/23 10:44:47 by muteza           ###   ########.fr       */
+/*   Updated: 2023/10/23 11:03:05 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@
 class Bureaucrat {
 	public :
 			//constructor & destructor
+			Bureaucrat();
 			Bureaucrat(int grade, std::string const name);
-			Bureaucrat(Bureaucrat const & src);
+			Bureaucrat(Bureaucrat const &src);
 			~Bureaucrat();
 			//operator overload
-			Bureaucrat &operator=(Bureaucrat const & rhs);
+			Bureaucrat &operator=(Bureaucrat const &rhs);
 			// Accessor
 			std::string const	&getName( void ) const;
 			int const	&getGrade( void ) const;
@@ -41,11 +42,12 @@ class Bureaucrat {
 						virtual const char *what() const throw();
 			};
 			//Member function
+			void	exceptionCheck(void) const;
 			void	upGrade( void );
 			void	downGrade( void );
 	private :
-		std::string	_name;
-		int			_grade;
+		std::string const	_name;
+		int	_grade;
 };
 //Stream out
 std::ostream	&operator<<( std::ostream &o, Bureaucrat const &i );
