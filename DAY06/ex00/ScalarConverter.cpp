@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:18:51 by muteza            #+#    #+#             */
-/*   Updated: 2023/11/15 10:51:36 by muteza           ###   ########.fr       */
+/*   Updated: 2023/11/29 03:40:52 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ std::string		ScalarConverter::getStr( void ) const
 }
 
 //Member function
+
 
 
 bool	ScalarConverter::isNumeric( std::string str ) const
@@ -156,18 +157,18 @@ double	ScalarConverter::toDouble( std::string str ) const
 
 const char* ScalarConverter::NotANumberException::what() const throw()
 {
-		return ("\033[1;33mimpossible\033[0m");
+		return ("impossible");
 }
 
 const char* ScalarConverter::NotDisplayableException::what() const throw()
 {
-	return ("\033[1;33mNot Displayable\033[0m");
+	return ("Not Displayable");
 }
 
 const char* ScalarConverter::OverflowException::what() const throw()
 {
 	errno = 0;
-	return ("\033[1;33mOverflow\033[0m");
+	return ("Overflow");
 }
 
 std::ostream &	operator<<( std::ostream & o, ScalarConverter const & c )
@@ -175,26 +176,26 @@ std::ostream &	operator<<( std::ostream & o, ScalarConverter const & c )
 	try {
 			o << "char : " << c.toChar(c.getStr()) << std::endl; }
 	catch (std::exception & e) {
-		std::cerr << "\033[1;31m" << e.what() << "\033[0m" << std::endl;}
+		std::cerr << e.what() << std::endl;}
 
 	try {
 			o << "int : " << c.toInt(c.getStr()) << std::endl; }
 	catch (std::exception & e) {
-		std::cerr << "\033[1;31m" << e.what() << "\033[0m" << std::endl;}
+		std::cerr << e.what() << std::endl;}
 
 	try {
 			o << "float : "	;
 			float f(c.toFloat(c.getStr()));
 			o << f << (f - static_cast<int>(f) == 0 ? ".0" : "") << "f" << std::endl; }
 	catch (std::exception & e) {
-		std::cerr << "\033[1;31m" << e.what() << "\033[0m" << std::endl; }
+		std::cerr << e.what() << std::endl; }
 
 	try {
 			o << "double : ";
 			double d(c.toDouble(c.getStr()));
 			o << d << (d - static_cast<long long>(d) == 0 ? ".0" : "") << std::endl; }
 	catch (std::exception & e) {
-		std::cerr << "\033[1;31m" << e.what() << "\033[0m" << std::endl; }
+		std::cerr << e.what() << std::endl; }
 
 	return o;
 }

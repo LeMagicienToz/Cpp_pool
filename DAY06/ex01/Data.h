@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   data.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 08:07:54 by muteza            #+#    #+#             */
-/*   Updated: 2023/11/29 04:11:43 by muteza           ###   ########.fr       */
+/*   Created: 2023/11/29 04:09:10 by muteza            #+#    #+#             */
+/*   Updated: 2023/11/29 04:09:13 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
-#include "Data.h"
+#ifndef DATA_H
+# define DATA_H
 
-int	main(void)
-{
-	Data	a;
-	a.value = 42;
+# include <iostream>
 
-	std::cout << a.value << std::endl;
+typedef struct s_data {
 
-	uintptr_t	b = Serializer::serialize(&a);
+	int	value;
+}	Data;
 
-	std::cout << b << std::endl;
-	std::cout << Serializer::deserialize(b)->value << std::endl;
-
-	return (0);
-}
+#endif

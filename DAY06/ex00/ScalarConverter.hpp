@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 08:08:12 by muteza            #+#    #+#             */
-/*   Updated: 2023/11/15 10:50:55 by muteza           ###   ########.fr       */
+/*   Updated: 2023/11/23 15:43:24 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <cctype>
 # include <string>
 # include <iomanip>
+# include <cerrno>
 # include <cstdlib>
 
 class ScalarConverter {

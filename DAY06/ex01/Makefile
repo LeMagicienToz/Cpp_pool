@@ -6,15 +6,15 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/11/15 09:18:41 by muteza           ###   ########.fr        #
+#    Updated: 2023/11/29 03:59:43 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME=		ScalarConverter
+NAME=		Serialization
 
 SRCS=		main.cpp\
-			ScalarConverter.cpp\
+			Serializer.cpp\
 			
 
 OBJS=	$(SRCS:.cpp=.o)
