@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   B.hpp                                              :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 04:23:01 by muteza            #+#    #+#             */
-/*   Updated: 2023/11/29 04:23:14 by muteza           ###   ########.fr       */
+/*   Created: 2023/10/22 08:08:12 by muteza            #+#    #+#             */
+/*   Updated: 2023/12/02 02:55:56 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef B_HPP
-# define B_HPP
-
-# include <iostream>
-
-# include "Base.hpp"
-
-class B : public Base {};
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 
 #endif

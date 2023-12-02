@@ -6,16 +6,15 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/11/29 04:33:27 by muteza           ###   ########.fr        #
+#    Updated: 2023/12/01 03:37:35 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME=		Base
+NAME=		Iter
 
 SRCS=		main.cpp\
-			Base.cpp\
-			
+
 
 OBJS=	$(SRCS:.cpp=.o)
 

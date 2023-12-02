@@ -6,16 +6,15 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/11/21 13:34:40 by muteza           ###   ########.fr        #
+#    Updated: 2023/11/30 04:38:52 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME=		Convert
+NAME=		Whatever
 
 SRCS=		main.cpp\
-			ScalarConverter.cpp\
-			
+
 
 OBJS=	$(SRCS:.cpp=.o)
 

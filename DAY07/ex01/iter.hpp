@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 04:24:00 by muteza            #+#    #+#             */
-/*   Updated: 2023/11/29 04:24:14 by muteza           ###   ########.fr       */
+/*   Created: 2023/10/22 08:08:12 by muteza            #+#    #+#             */
+/*   Updated: 2023/12/01 03:37:52 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
 
 # include <iostream>
-# include <ctime>
 
-class Base {
+template<typename ARRAY, typename SIZE>
+void iter(ARRAY *tab, SIZE const size, void(*f)(ARRAY const & i))
+{
+	for (SIZE i = 0; i < size; i++)
+		(*f)(tab[i]);
+}
 
-public:
-
-// dest
-	virtual ~Base( void );
-};
+template <typename ARRAY>
+void view(ARRAY const & i)
+{
+	std::cout << i << std::endl;
+}
 
 #endif
