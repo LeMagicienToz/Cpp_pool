@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 06:35:00 by muteza            #+#    #+#             */
-/*   Updated: 2023/10/15 18:31:27 by muteza           ###   ########.fr       */
+/*   Updated: 2023/12/09 03:53:56 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Dog : virtual public Animal
 {
 	
 	public:
-			//constructor and destructor
+			//constructor && destructor
 			Dog(); //default
 			Dog(Dog const &src); //copy
 			virtual ~Dog();
