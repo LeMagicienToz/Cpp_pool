@@ -6,15 +6,15 @@
 #    By: muteza <muteza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/07 09:02:27 by muteza            #+#    #+#              #
-#    Updated: 2023/12/01 03:45:09 by muteza           ###   ########.fr        #
+#    Updated: 2024/02/21 12:49:28 by muteza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME=		easy_find
+NAME=		Span
 
-SRCS=		main.cpp
-
+SRCS=		main.cpp \
+			Span.cpp
 
 OBJS=	$(SRCS:.cpp=.o)
 
