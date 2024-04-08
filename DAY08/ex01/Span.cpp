@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:32:58 by muteza            #+#    #+#             */
-/*   Updated: 2024/02/21 15:38:13 by muteza           ###   ########.fr       */
+/*   Updated: 2024/04/08 09:57:15 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,25 @@ void Span::addNumber(unsigned int const &number)
 	if (this->_size == this->_span.size())
 		throw SpanFull();
 	this->_span.push_back(number);
+}
+
+unsigned int	Span::shortestSpan( void ) const 
+{
+	if (this->_span.size() < 2)
+		throw LessTwoNumbers();
+	std::vector<unsigned int>	tmp(this->_span);
+	unsigned int				min_dist = std::numeric_limits<unsigned int>::max();
+
+	std::sort( tmp.begin(), tmp.end() );
+
+	for (unsigned int i = 0; i < tmp.size() - 1; i++) {
+
+		unsigned int diff = static_cast<int>( std::abs( static_cast<int>(tmp[ i ] - tmp[ i + 1 ]) ) );
+
+		min_dist = std::min(min_dist, diff);
+		// std::cout << min_dist << std::endl;
+	}
+	return (min_dist);
 }
 
 unsigned int Span::longestSpan()

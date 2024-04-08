@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 08:08:12 by muteza            #+#    #+#             */
-/*   Updated: 2024/02/21 15:38:06 by muteza           ###   ########.fr       */
+/*   Updated: 2024/04/08 10:47:23 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class Span {
 			//Member function
 			void addNumber(unsigned int const &number);
 			unsigned int longestSpan();
-			// shortestSpan() const;
+			unsigned int shortestSpan() const;
 			//operator
 			Span	&operator=(Span const &rhs);
 	private:
@@ -48,5 +48,12 @@ class Span {
 		std::vector<unsigned int>	_span;
 		Span( void ); //constructeur par default
 };
+
+template<typename InputIterator>
+void addRange(Span& span, InputIterator first, InputIterator last) {
+    for (; first != last; ++first) {
+        span.addNumber(*first);
+    }
+}
 
 #endif
