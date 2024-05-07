@@ -6,11 +6,12 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:32:58 by muteza            #+#    #+#             */
-/*   Updated: 2024/04/08 09:57:15 by muteza           ###   ########.fr       */
+/*   Updated: 2024/05/07 14:41:11 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <limits>
 #include <iterator>
 
 /* Constructor & destructor */
@@ -37,7 +38,7 @@ unsigned int	Span::shortestSpan( void ) const
 	if (this->_span.size() < 2)
 		throw LessTwoNumbers();
 	std::vector<unsigned int>	tmp(this->_span);
-	unsigned int				min_dist = std::numeric_limits<unsigned int>::max();
+	unsigned int	min_dist = std::numeric_limits<unsigned int>::max();
 
 	std::sort( tmp.begin(), tmp.end() );
 
