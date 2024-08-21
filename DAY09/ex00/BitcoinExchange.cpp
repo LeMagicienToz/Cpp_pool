@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 13:08:04 by muteza            #+#    #+#             */
-/*   Updated: 2024/08/19 18:36:26 by muteza           ###   ########.fr       */
+/*   Updated: 2024/08/20 16:32:29 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,8 @@ int		BitcoinExchange::valueCheck( std::string const &value ) const {
 	{
 		if((value[i] == '.' && value[i + 1]) && point != true)
 		{
+			if (value[i] == '.' && value[i + 1] == '.')
+				return 3;
 			i++;
 			point = true;
 		}

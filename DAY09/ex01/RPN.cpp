@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:50:17 by muteza            #+#    #+#             */
-/*   Updated: 2024/08/19 19:23:23 by muteza           ###   ########.fr       */
+/*   Updated: 2024/08/20 11:11:57 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,21 @@ RPN::RPN( std::stringstream &rpn)
 			if (stack.size() < 2) 
 				throw std::invalid_argument("\033[1;31m[Error]\033[0m insufficient values in the expression.");
 
-			int operand2 = stack.top(); stack.pop();
-			int operand1 = stack.top(); stack.pop();
+			int operator2 = stack.top(); stack.pop();
+			int operator1 = stack.top(); stack.pop();
 			int result;
 
 			if (token == "+") {
-				result = operand1 + operand2;
+				result = operator1 + operator2;
 			} else if (token == "-") {
-				result = operand1 - operand2;
+				result = operator1 - operator2;
 			} else if (token == "*") {
-				result = operand1 * operand2;
+				result = operator1 * operator2;
 			} else if (token == "/") {
-				if (operand2 == 0) {
+				if (operator2 == 0) {
 					throw std::invalid_argument("\033[1;31m[Error]\033[0m division by zero.");
 				}
-				result = operand1 / operand2;
+				result = operator1 / operator2;
 			}
 
 			stack.push(result);
