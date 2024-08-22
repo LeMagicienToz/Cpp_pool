@@ -6,43 +6,61 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:42:49 by muteza            #+#    #+#             */
-/*   Updated: 2024/08/21 11:15:03 by muteza           ###   ########.fr       */
+/*   Updated: 2024/08/22 14:01:40 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PMERGEME_HPP
+#ifndef  PMERGEME_HPP
 # define PMERGEME_HPP
 
-# include <iostream>
-# include <sstream>
-# include <ctime>
+#include <iostream>
+#include <string.h>
+#include <sstream>
+#include <climits>
+#include <deque>
+#include <vector>
+#include <ctime>
+#include <algorithm>
+#include <cstdlib>
+#include <stdio.h>
 
-# include <stdexcept>
+class PmergeMe
+{
+	public:
+		PmergeMe();
+		PmergeMe(PmergeMe const & src);
+		~PmergeMe();
+		PmergeMe &		operator=( PmergeMe const & rhs );
+		std::deque<int> deque;
+		std::vector<int> vector;
 
-# include <algorithm>
-# include <deque>
-# include <iterator>
-# include <vector>
+		template <typename T> 
+		void	recursive(T &contain, int begin, int end) {
+			int mid = (begin + end) / 2;
+			if (begin < end) {
+				recursive(contain, begin, mid);
+				recursive(contain, mid + 1, end);
+				merge(contain, begin, mid, end);
+			}
+		}
 
-class PmergeMe {
-
-public:
-/*CONST / DEST*/
-	PmergeMe( PmergeMe const &src );
-	PmergeMe(int ac, char **av);
-	void SortVector(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-	void SortDeque(std::deque<int>::iterator begin, std::deque<int>::iterator end);
-	std::vector<int> const	&getVector( void ) const;
-	std::deque<int> const	&getDeque( void ) const;
-	~PmergeMe();
-
-/*OPERATOR OVERLOAD*/
-	PmergeMe &operator=(PmergeMe const &rhs) ;
-
-private:
-	PmergeMe();
-	std::vector<int>	_vec;
-	std::deque<int>		_deq;
+		template <typename T> 
+		void	merge(T &contain, int left, int mid, int right) {
+			std::vector<int> tmp(right - left + 1);
+			int i = left; int j = mid + 1; int k = 0;
+			while (i <= mid && j <= right) {
+				if (contain[i] < contain[j])
+					tmp[k++] = contain[i++];
+				else
+					tmp[k++] = contain[j++];
+			}
+			while (i <= mid) 
+				tmp[k++] = contain[i++];
+			while (j <= right) 
+				tmp[k++] = contain[j++];
+			for (int p = 0; p < k; p++) 
+				contain[left + p] = tmp[p];
+		}
 };
 
 #endif
